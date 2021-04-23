@@ -9,12 +9,12 @@ const initialState = {
       category: 'vegetables',
     },
     {
-      id: myId,
+      id: myId(),
       title: 'chicken',
       category: 'white_meat',
     },
     {
-      id: myId,
+      id: myId(),
       title: 'rice',
       category: 'cerealis',
     }
