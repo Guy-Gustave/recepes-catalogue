@@ -1,27 +1,28 @@
 import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import ProductComponent from '../components/ProductComponent';
+import { setProducts } from '../actions/Product'
 
 const ProductListing = () => {
   const products = useSelector((state) => state);
+  const dispatch = useDispatch();
 
   const fetchProducts = async () => {
     const response = await axios
-    .get ("https://vpic.nhtsa.dot.gov/api/vehicles/GetWMIsForManufacturer/hon?format=json")
-    .catch((err)=> {
-      console.log("Err", err);
-    });
-    console.log(response.data);
+      .get("https://fakestoreapi.com/products").catch((err) => {
+        console.log("Err", err);
+      });
+    dispatch(setProducts(response.data));
   };
 
   useEffect(() => {
     fetchProducts();
   }, []);
-  console.log(products);
-  
+  console.log('Products: ', products);
+
   return (
-    <div>
+    <div className="affiche">
       <ProductComponent />
     </div>
   );
