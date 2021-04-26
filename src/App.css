@@ -103,11 +103,6 @@
 .ui.grid > .row > img {
   height: 100%;
 }
-.ui.placeholder .header:not(:first-child):before,
-.ui.placeholder .image:not(:first-child):before,
-.ui.placeholder .paragraph:not(:first-child):before {
-  display: none;
-}
 
 .ui.label,
 .ui.labels .label {
@@ -121,20 +116,45 @@
   font-size: 18px;
   color: #777;
 }
-.ui.placeholder.segment .column .button,
-.ui.placeholder.segment .column .field,
-.ui.placeholder.segment .column textarea,
-.ui.placeholder.segment .column > .ui.input {
-  background-color: #ff3e6c;
-  border: 1px solid #ff3e6c;
-  color: #fff;
-  font-size: 18px;
-  margin-left: 0;
-}
 
 .affiche {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 1rem;
   column-gap: 2rem;
+}
+
+.detail-product {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 3rem;
+}
+
+.column img{
+  width: 30rem;
+  margin: 2rem;
+}
+
+.tag-price {
+  padding: 1.7rem;
+  font-size: 2rem;
+  color: rgb(93, 93, 133);
+}
+
+.column h1 {
+  color: rgb(110, 41, 41);
+  font-size: x-large;
+  padding-bottom: 2rem;
+}
+
+.column h3 {
+  font-size: xx-large;
+  color: rgb(63, 13, 13);
+  padding-bottom: 3rem;
+}
+
+.column p {
+  text-align: center;
+  padding: 10px 50px;
 }
