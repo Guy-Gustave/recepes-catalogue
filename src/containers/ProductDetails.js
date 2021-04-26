@@ -3,27 +3,44 @@ import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import axios from 'axios';
 import { selectedProduct } from '../actions/Product';
-
+import '../App.css'
 
 const ProductDetails = () => {
   const product = useSelector(state => state.product)
-  const  { productId } = useParams();
+  const { image, title, price, category, description } = product;
+  const { productId } = useParams();
   const dispatch = useDispatch();
-  console.log(productId);
+  console.log(product);
 
   const fetchProductsDetail = async () => {
     const response = await axios.get(`https://fakestoreapi.com/products/${productId}`).catch((err) => {
       console.log('err', err);
     });
-  dispatch(selectedProduct(response.data));
+    dispatch(selectedProduct(response.data));
   }
   useEffect(() => {
     if (productId && productId !== "") fetchProductsDetail()
-  }, [productId])
+  }, [productId]);
   return (
-    <div>
-      <h1>ProductDetails</h1>
-    </div>
+    <div className="ui grid container">
+      {Object.keys(product).length === 0 ? (
+        <div>...Loading</div>
+      ) : (
+        <div className="detail-product">
+          <div className="column lp">
+            <img className="ui fluid image" src={image} alt={image} />
+          </div>
+          <div className="column rp">
+            <h1>{title}</h1>
+            <h2>
+              <a className="tag-price">${price}</a>
+            </h2>
+            <h3 className="tag-categoryr">{category}</h3>
+            <p>{description}</p>
+          </div>
+        </div>
+      )}
+    </div >
   );
 };
 
