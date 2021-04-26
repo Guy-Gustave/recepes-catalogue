@@ -1,6 +1,5 @@
 import { ActionsType } from "../components/actionType";
 
-const myId = () => Math.floor(Math.random() * 500);
 const initialState = {
   products: [
   ]
