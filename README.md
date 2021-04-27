@@ -10,6 +10,9 @@
 ### 🔴 Live Demo
 [Link to Netlify](https://jolly-jones-5a80e2.netlify.app/)
 
+### 🔴 descripton
+[link to video](https://www.loom.com/share/b3c32fa24f0b41c0a340e480b95f51dc)
+
 #### To get this project on your local machine, follow these steps:
 
 1. Run this command `git@github.com:Guy-Gustave/recepes-catalogue.git` in the desired folder to clone the repository on to your local machine.
