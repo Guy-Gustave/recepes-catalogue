@@ -41,7 +41,7 @@ After cloning the project, you should move into the directory where the project 
 
 👤 **Guy Gustave NIGABA**
 
-- Github: [@Gustave](https://github.com/Guy-Gustave)
+- Github: you can send email at [@Gustave](https://github.com/Guy-Gustave )
 - Linkedin: [Guy-Gustave](https://www.linkedin.com/in/guy-gustave-nigaba)
 - E-mail: [guymoustapha@gmail.com](guymoustapha@gmail.com)
 
