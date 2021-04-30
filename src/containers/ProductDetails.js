@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import { selectedProduct } from '../actions/Product';
@@ -15,11 +15,7 @@ const ProductDetails = () => {
   const dispatch = useDispatch();
 
   const fetchProductsDetail = async () => {
-    const response = await axios
-      .get(`https://fakestoreapi.com/products/${productId}`)
-      .catch((err) => {
-        console.log('err', err);
-      });
+    const response = await axios.get(`https://fakestoreapi.com/products/${productId}`);
     dispatch(selectedProduct(response.data));
   };
   useEffect(() => {
@@ -32,6 +28,12 @@ const ProductDetails = () => {
       ) : (
         <div className="detail-product">
           <div className="column lp">
+            <div className="link">
+              <h1>
+                Back to
+                <Link to="/">ProductListing </Link>
+              </h1>
+            </div>
             <img className="ui fluid image" src={image} alt={image} />
           </div>
           <div className="column rp">
