@@ -32,7 +32,131 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.column h1 {
+  color: rgb(110, 41, 41);
+  font-size: x-large;
+  padding-bottom: 2rem;
+}
+
+.column.rp h1 {
+  color: #333;
+}
+
+.column p {
+  text-align: center;
+  padding: 10px 50px;
+}
+
+.column.rp p {
+  font-size: 18px;
+  color: #777;
+}
+
+.affiche {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem;
+  column-gap: 2rem;
+}
+
+.detail-product {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 3rem;
+}
+
+.column img {
+  width: 30rem;
+  margin: 2rem;
+}
+
+.tag-price {
+  padding: 1.7rem;
+  font-size: 2rem;
+  color: rgb(93, 93, 133);
+}
+
+.column h3 {
+  font-size: xx-large;
+  color: rgb(63, 13, 13);
+  padding-bottom: 3rem;
+}
+
+.ui.cards > .card > .image {
+  height: 250px;
+  padding: 20px;
+  background: rgb(240, 233, 233);
+  margin: auto;
+}
+
+.ui.cards > .card > .image > img {
+  height: 100%;
+  max-width: 100%;
+  width: auto;
+}
+
+.ui.cards > .card > .content > .header {
+  height: 48px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.ui.cards > .card > .content > .description {
+  height: 36px;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+
+.ui.cards > .card .meta.price {
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+}
+
+.ui.cards > .card .meta.price > a {
+  font-size: 1.3rem;
+  color: #222;
+}
+
+.ui.menu.fixed {
+  height: 60px;
+  padding-top: 15px;
+}
+
+.ui.grid.container {
+  margin-top: 45px;
+}
+
+.ui.grid > .row {
+  background: #fff;
+}
+
+.ui.grid > .row > .column.lp {
+  padding: 20px 40px 20px 20px;
+  align-self: flex-start !important;
+}
+
+.ui.grid > .row > .column.rp {
+  padding: 20px 20px 20px 40px;
+  text-align: left;
+  align-self: flex-start !important;
+}
+
+.ui.label,
+.ui.labels .label {
+  font-size: 22px;
 }
